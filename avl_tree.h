@@ -125,7 +125,7 @@ namespace misolib {
 
       if (p->value == x) return true;
 
-      Node<T> **next_target = &(p->value < x ? p->left : p->right);
+      Node<T> **next_target = &(x < p->value ? p->left : p->right);
       return find(next_target, x);
     }
 
